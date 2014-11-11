@@ -12,24 +12,14 @@ log4j.appender.stdout.layout=org.apache.log4j.SimpleLayout
 #log4j.appender.logfile.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %F %p %m%n
 
 log4j.appender.dailyfile = com.wms.util.log.WmsDailyRollingFileAppender 
-log4j.appender.dailyfile.File = D:/logs/dailylog-error.log
+log4j.appender.dailyfile.File = D:/logs/dailylog.log
 log4j.appender.dailyfile.MaxFileSize=512KB
 log4j.appender.dailyfile.MaxBackupIndex=10
 log4j.appender.dailyfile.DatePattern = '.'yyyy-MM-dd
 log4j.appender.dailyfile.layout=org.apache.log4j.PatternLayout
 log4j.appender.dailyfile.layout.ConversionPattern=%-d{yyyy-MM-dd HH\:mm\:ss,SSS} [%c]-[%p] %m%n
 #FATAL  ERROR  WARN  INFO  DEBUG  TRACE
-log4j.appender.dailyfile.Threshold=ERROR
-
-log4j.appender.dailyfile = com.wms.util.log.WmsDailyRollingFileAppender 
-log4j.appender.dailyfile.File = D:/logs/dailylog-info.log
-log4j.appender.dailyfile.MaxFileSize=512KB
-log4j.appender.dailyfile.MaxBackupIndex=10
-log4j.appender.dailyfile.DatePattern = '.'yyyy-MM-dd
-log4j.appender.dailyfile.layout=org.apache.log4j.PatternLayout
-log4j.appender.dailyfile.layout.ConversionPattern=%-d{yyyy-MM-dd HH\:mm\:ss,SSS} [%c]-[%p] %m%n
-#FATAL  ERROR  WARN  INFO  DEBUG  TRACE
-log4j.appender.dailyfile.Threshold=INFO
+log4j.appender.dailyfile.Threshold=WARN
 
 log4j.logger.traceLogger=INFO,dailyfileinfo 
 #log4j.appender.dailyfileinfo = com.wms.util.log.WmsDailyRollingFileAppender 
